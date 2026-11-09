@@ -1,0 +1,20 @@
+{
+  "source": "PrivateFit transcript export, Noise Icon Plus (MOYOUNG-V2, MOY-BEU3-2.3.5) on a Galaxy S23, 2026-10-13 21:52 IST (UTC+5:30), NoiseFit still installed",
+  "notes": [
+    "The phone's OS had negotiated MTU 247 but ble-plx reported 23, so the app framed in the short form; the watch frames its own messages in the long form (FE EA 20 ...).",
+    "The two 0x6D frames arrived right after a 40 s heart-rate stream on 0x2A37: a measurement started on the watch reports FF while measuring, then the result (0x4A = 74 bpm).",
+    "No reply followed the clock frame (command 49) or the find-watch frame (command 97)."
+  ],
+  "frames": [
+    { "t": 1792002179717, "dir": "rd", "uuid": "2a29", "hex": "4d4f594f554e472d5632", "note": "manufacturer MOYOUNG-V2" },
+    { "t": 1792002180420, "dir": "rx", "uuid": "fea1", "hex": "01000000", "note": "WeChat pedometer: flags 1, 0 steps today" },
+    { "t": 1792002181129, "dir": "rd", "uuid": "2a19", "hex": "1d", "note": "battery 29%" },
+    { "t": 1792002181869, "dir": "tx", "uuid": "fee2", "hex": "feea100a316ace37bd08", "note": "command 49 sync time, sent at 16:23:01 UTC = 21:53:01 IST; payload = local wall-clock as GMT+8 epoch, zone byte 8" },
+    { "t": 1792002250273, "dir": "rx", "uuid": "2a37", "hex": "064d", "note": "heart rate 77, contact detected" },
+    { "t": 1792002289329, "dir": "rx", "uuid": "2a37", "hex": "064a", "note": "heart rate 74" },
+    { "t": 1792002289419, "dir": "rx", "uuid": "fee3", "hex": "feea20066dff", "note": "command 109 from the watch: measuring" },
+    { "t": 1792002289421, "dir": "rx", "uuid": "fee3", "hex": "feea20066d4a", "note": "command 109 from the watch: result 74 bpm" },
+    { "t": 1792002316639, "dir": "tx", "uuid": "fee2", "hex": "feea100a316ace384408", "note": "command 49 again from the settings screen, 135 s later" },
+    { "t": 1792002355906, "dir": "tx", "uuid": "fee2", "hex": "feea100561", "note": "command 97 find my watch" }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "source": "gadgetbridge.org MoYoung protocol page, documented example frame (not a capture from our watch)",
+  "frames": [
+    { "dir": "tx", "uuid": "fee2", "hex": "feea200a3168a3100308", "note": "command 49 sync time, 4-byte big-endian seconds 0x68a31003 then zone byte 8; length 10 in the long size form" }
+  ]
+}
